@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  box-sizing: border-box
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,708 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.white{
+  padding: 1em;
+  background-color: aliceblue;
+  border-radius: 50%;
+  position: relative;
+}
+#white1{
+  right: 4em;
+}
+#white2{
+  top: 2em;
+  left: 4em;
+}
+#white3{
+  align-self: center;
+  left: 7em;
+  top: 5em;
+}
+.white img{
+  width: 30px;
+  
+}
+.ski{
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-self: center;
+  z-index: -1;
+}
+.img2{
+  display: flex;
+ justify-content: space-between;
+ width: 100%;
+
+}
+#writer-box{
+  font-family: fantasy;
+  font-size: clamp(1.5rem,5vw,3rem);
+  font-weight: 900;
+}
+.writer{
+  position: relative;
+}
+.tr{
+  padding: 0 2em 0 2em;
+  max-width: 620px;
+  font-weight: 400;
+}
+.tr span{
+  font-weight: 600;
+}
+#blink{
+  top: .2em;
+  background-color: black;
+  width: .2em;
+  height: 1em;
+  position: relative;
+  animation: blink .4s infinite;
+  display: inline-block;
+}
+@keyframes blink{
+  50%{
+    background-color: transparent;
+  }
+  100%{
+    background-color: black;
+  }
+}
+
+
+.img2 img{
+width: 30px;
+  
+}
+.img{
+  display: flex;
+  gap: 2em;
+  
+  top: 9em;
+}
+.none{
+ display: none;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  padding: 1em 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  border: white solid;
+  z-index: 1;
+  
+}
+.nav-up{
+  transform: translateY(-10em);
+}
+.nav-down{
+  transition: all .5s;
+  transform: translateY(0);
+}
+nav .arrow{
+   width: 18px;
+   margin-left: .5em;
+}
+.med-icon-box{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  color: red;
+}
+.med-icon-box p{
+   font-size: 1.4rem;
+   font-weight: 700;
+}
+.spin{
+  animation: spin 1s;
+}
+@keyframes spin{
+  to{
+    transform: rotateZ(360deg);
+  }
+}
+.first-nav{
+  display: flex;
+  justify-content:space-around;
+  width: 100%;
+  align-items: center;
+}
+.dots{
+   display: flex;
+   gap: .2em;
+   position: relative;
+}
+nav .icon{
+   width: 40px;
+}
+.sec-nav{
+  display: none;
+  font-weight: 700;
+  gap: 2em;
+  position: absolute;
+  flex-direction: column;
+  background-color: wheat;
+  right: -50%;
+  align-items: center;
+  top: 5em;
+
+}
+.sec-nav .solute-box{
+  position: relative;
+
+}
+.show-sec-nav{
+   animation: show-sec 1s forwards;
+   display: flex;
+}
+@keyframes show-sec{
+  to{
+    right: 10%;
+  }
+}
+.solute-box .solute-nav{
+  position: absolute;
+  background-color: white;
+  left: -190%;
+  top: 4em;
+  border-radius: 15px;
+  padding: 1em 1em;
+  transition: all .5s;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  visibility: hidden;
+}
+.solute-box:hover .solute-nav{
+   top: 2.2em;
+   visibility: visible;
+}
+.first-cont{
+  padding: 1em;
+  margin-top: 7em;
+  position: relative;
+  
+}
+.first-cont .typebox-parent{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  text-align: center;
+  max-width: 900px;
+  justify-content: center;
+  margin: auto;
+}
+.typebox-parent .button-box{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4em;
+  justify-content: center;
+  margin-top: 2em;
+}
+.button-box p{
+  background-color: red;
+  padding: .8em 2.3em;
+  border-radius: 5px;
+}
+.second-cont{
+  display: flex;
+  position: relative;
+}
+.second-cont .cont{
+  display: none;
+
+  margin-top: 9em;
+}
+.second-cont .flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 5%;
+  
+  width: 100%;
+  align-self: flex-end;
+}
+.phone-size{
+  width: 340px;
+  height: 800px;
+  filter: drop-shadow(16px 16px 6em rgba(0, 0, 0, 0.199)) ;
+  align-self: center;
+}
+.flex .flex-group{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5em;
+   text-align: center;
+}
+.flex-group .arrow{
+  display: none;
+}
+.flex-group > div{
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  align-items: center;
+}
+.pic-box{
+  padding: .5em;
+  background-color: rgba(255, 0, 0, 0.205);
+  border-radius: 12px;
+}
+.pic-box + p{
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.flex-group img{
+  width: 25px;
+}
+.third-sec{
+  display: flex;
+  flex-direction: column;
+  padding: 10em 2em;
+  gap: 4em;
+  justify-content: center;
+  align-items: center;
+}
+.third-sec > div:first-child{
+  font-size:clamp(2rem,5vw,3rem);
+  text-align: center;
+}
+.service-box-parent{
+  display: flex;align-items: center;
+  gap: 3.5em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.third-sec .service-box{
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  max-width: 400px;
+}
+.phone{
+  filter: drop-shadow(16px 16px 6em rgba(0, 0, 0, 0.199)) ;
+}
+.service-box .group{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.group .animate{
+  height: .1em;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.178);
+  position: relative;
+}
+.group .section-parent{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.section-parent section{
+  display: flex;
+  justify-content: space-between;
+}
+section p{
+  font-size: 1.6rem;
+}
+.group  .animate::after{
+  position: absolute;
+  content: '';
+  width: 0%;
+  transition:all .2s ;
+  height: 100%;
+  background-color: red;
+}
+.group:hover .animate::after{
+  width: 100%;
+}
+.addcolor p{
+  color: red;
+}
+.service-box .angle{
+  width: 20px;
+  align-self: flex-end;
+}
+.utility{
+  display: flex;
+  flex-direction: column;
+  gap:3em;
+  align-items: center;
+}
+.text{
+  font-size: clamp(2rem,5vw,4rem);
+}
+.button{
+  padding: 1em 2.5em;
+  border-radius: 8px;
+  background-color: rgba(255, 0, 0, 0.781);
+  color: white;
+}
+#fourth-sec{
+  padding: 0 1em;
+}
+.wrapping{
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#cont-box{
+  width: 100%;
+}
+#wr{
+  max-width: 400px;
+  padding: 1.4em;
+  border: black solid .5px;
+  border-radius: 15px;
+}
+.red-text{
+  font-size: 1.6rem;
+  color: rgba(255, 0, 0, 0.589);
+  margin-bottom: 1em;
+}
+#fifth-sec{
+  padding-top: 7em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 7em;
+}
+.pharmacy{
+  text-align: center;
+  max-width: 730px;
+}
+.drug-box{
+  padding: 1.5em 1.3em 2.6em 1.3em;
+  gap: 1em;
+  box-shadow: 0 0 9em .1em rgba(0, 0, 0, 0.178);
+  text-align: center;
+  max-width: 300px;
+  border-radius: 15px;
+}
+.drug-box p:nth-child(2){
+  margin: 0;
+  font-size: 2rem;
+}
+#seventh-sec{
+  padding: 0 1.5em;
+}
+#store{
+  justify-content: center;
+  gap: 1.5em;
+}
+.get{
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw,3.5rem);
+}
+footer{
+  display: grid;
+  gap: 2em;
+  padding: 4em 1em 10em 1em;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: black;
+  grid-template-areas: 'foot1'
+                       'foot2'
+                       'foot3'
+                       'foot4'
+                       'foot5'
+                       'foot6'
+                       'foot7';
+}
+.share{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+.small-font{
+  font-size: .7rem;
+}
+#fulltext{
+  margin: auto;
+  align-self: center;
+  justify-self: center;
+  max-width: 250px;
+  line-height: 2em;
+}
+#foot1{
+  grid-area: foot1;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+#foot2{
+  grid-area: foot2;
+  gap: 1em;
+}
+#foot3{
+  grid-area: foot3;
+  gap: 1em;
+}
+#foot4{
+  grid-area: foot4;
+  gap: 1em;
+}
+#foot5{
+  grid-area: foot5;
+  margin: auto;
+  margin-top: 2em;
+}
+#foot6{
+  grid-area: foot6;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: center;
+  
+}
+#foot7{
+  grid-area: foot7;
+  margin-top: 2em;
+}
+
+@media(min-width:500px){
+  footer{
+    grid-template-areas: 'foot1 foot2'
+                         'foot3 foot4'
+                         'foot5 foot6'
+                         'foot7 foot7';
+  }
+}
+@media(min-width:801px){
+   #secnav{
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+    display: flex;
+   }
+   .solute-box .solute-nav{
+    left: 0;
+    width: 17em;
+    border: black solid 1px;
+   }
+   .solute-nav div{
+    margin: auto;
+   }
+   .first-nav{
+    width: initial;
+   }
+   .icon{
+    display: none;
+   }
+}
+@media(min-width:850px){
+  footer{
+    justify-content: space-around;
+    grid-template-areas: 'foot1 foot2 foot3 foot4'
+                         'foot7 foot5 foot6 foot6';
+  }
+}
+@media(min-width:900px){
+  .pharmacy{
+    text-align: right;
+  }
+  #pharm-box{
+    align-self: flex-end;
+    align-items: flex-end;
+    text-align:right;
+    max-width: 790px;
+    margin: auto;
+  }
+}
+@media(min-width:1001px){
+  .second-cont .flex{
+    flex-direction: row;
+  }
+  .flex-group > div{
+    align-items: flex-start;
+    text-align: initial;
+  }
+  #drug-all{
+    justify-content: center;
+  }
+  #curve-arrow{
+    display: block;
+  }
+}
+@media(min-width:1201px){
+  .ski{
+    display: flex;
+    top: 35%;
+    left: 30%;
+  }
+  .second-cont .cont{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .cont .bigkite-box{
+    position: relative;
+    position: absolute;
+  }
+  .cont .kite{
+      position: absolute;
+      left: 18em;
+      top:11em;
+      z-index: -1;
+  }
+  .cont > img{
+    width: 290px;
+    position: relative;
+    bottom: 24em;
+    margin-top: 79em;
+    left: 5em;
+  }
+  .flex-group .arrow{
+    display: block;
+    width: 200px;
+  }
+  .third-sec{
+    padding-top: 0;
+  }
+  #fourth-sec{
+    padding: 0 8em;
+  }
+  #cont-box{
+    gap: 6em;
+  }
+  #three-phones{
+    display: flex;
+    align-items: center;
+    box-shadow: 16px 16px 6em rgba(0, 0, 0, 0.199) ;
+  }
+ 
+  .medium{
+    width: 230px;
+    height: 450px;
+    filter:drop-shadow(16px 16px 6em rgba(0, 0, 0, 0.199)) ;
+  }
+  .arrow{
+    width: 80px;
+  }
+  #big-phone{
+    width: 280px;
+    filter:drop-shadow(16px 16px 6em rgba(0, 0, 0, 0.199)) ;
+  }
+  .text{
+    align-self: flex-start;
+  }
+  #drug-all{
+    gap: 7em;
+  }
+  #pharm-box{
+    position: relative;
+    left: 9em;
+  }
+  footer{
+    grid-template-areas: 'foot1 foot2 foot2 foot3 foot3 foot4'
+                         'foot7 foot5 foot5 foot5 foot6 foot6';
+  }
+}
+@media(min-width:1251px){
+  .third-sec .service-box-parent{
+    justify-content: space-around;
+    width: 100%;
+  }
+  .third-sec > div:first-child{
+    text-align: left;
+    align-self: flex-start;
+    margin-left: 4em;
+  }
+  #fifth-sec{
+    padding-top: 20em;
+    position: relative;
+  }
+  #fifth-sec::before{
+    content: url(https://medoncall-fab0f.web.app/static/media/Rectangle5.9bc10eb4.svg);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    right: 0;
+    left: 5.5em;
+  }
+  #sixth-sec{
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1em 9em 1em;
+    align-items: center;
+    gap: 4em;
+  }
+  .back-box{
+    height: 18em;
+    display: flex;
+    width: 70em;
+    position: relative;
+   
+  }
+  .back-box div{
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+  }
+  .back-box div:first-child{
+     background-image: url(https://medoncall-fab0f.web.app/static/media/Rectangle18.267b380a.svg);
+     inset: 0 60% 0 0;
+  }
+  .back-box div:nth-child(2){
+    background-image: url(https://medoncall-fab0f.web.app/static/media/Rectangle19.1b4c3a9b.svg);
+    inset: 0 40% 0 20%;
+  }
+  .back-box div:nth-child(3){
+    background-image: url(https://medoncall-fab0f.web.app/static/media/Rectangle20.c1c0ad2b.svg);
+    inset: 0 10% 0 42%;
+  }
+  .back-box div:nth-child(4){
+    background-image: url(https://medoncall-fab0f.web.app/static/media/Rectangle21.2919e792.svg);
+    inset:0 0 0 70% ;
+  }
+  #seventh-sec{
+    padding-top: 20em;
+    padding-bottom: 3em;
+    position: relative;
+  }
+  #seventh-sec::before{
+    position: absolute;
+    width: 100%;
+    bottom: 0em;
+    left: 6em;
+    z-index: -1;
+    
+    content: url(https://medoncall-fab0f.web.app/static/media/Rectangle15.a17190ab.svg);
+  }
+  .design{
+    font-size: 2.8rem;
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    top: 4.8em;
+  }
+  .para1{
+    left: 2.5em;
+  }
+  .para2{
+     text-align: center;
+     max-width: 5em;
+     left: 2.6em;
+     top: 3.5em;
+  }
+  .para3{
+    left: 2.5em;
+  }
+  .health-text{
+    max-width: 600px;
+    margin-left: 4em;
+    font-weight: 700;
+    font-size: clamp(2rem,4vw,3rem);
+  }
 }
