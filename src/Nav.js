@@ -1,22 +1,28 @@
 import reddot from './pictures/red-dot.svg'
 import cancel from './pictures/cancel.svg'
 import hamburger from './pictures/hamburger.svg'
-import { useEffect, useMemo, useRef, useState, useLayoutEffect } from 'react'
-console.log(window.screenY)
+import { useEffect, useMemo, useRef, useState, useLayoutEffect, useCallback } from 'react'
 const Nav=()=>{
     const [navshow,setNavshow]=useState(false)
     const [hover,sethover]=useState(false)
     const [scroll,setscroll]=useState(window.screenY)
     const [win,setwin]=useState('')
+    useLayoutEffect(()=>{
+        setscroll(window.scrollY)
+    },[])
+    const Scrollevent=()=>{
+        if(window.scrollY>scroll){
+            setwin('nav-down')
+        }else{
+            setwin('nav-up')
+        }
+        setscroll(window.scrollY)
+    }
     useEffect(()=>{
-        window.addEventListener('scroll',()=>{
-            if(window.scrollY>scroll){
-                setwin('nav-up')
-            }else{
-                setwin('nav-down')
-            }
-            setscroll(window.scrollY)
-        })
+        window.addEventListener('scroll',Scrollevent)
+        return ()=>{
+            window.removeEventListener('scroll',Scrollevent)
+        }
     },[scroll])
     return (
         <nav className={win}>

@@ -4,8 +4,8 @@ let words=['Purchase Prescribed Drugs','Consult Healthcare Professionals','All I
 let letterIndex=0
 let wordIndex=0
 let len=words[wordIndex].length
-    
 const Writer=()=>{
+    const time= useRef()   
     const text =useRef()
     useEffect(()=>{
        const intr=setInterval(() => {
@@ -14,7 +14,7 @@ const Writer=()=>{
                 text.current.textContent=text.current.textContent.concat(words[wordIndex][letterIndex])
                 letterIndex+=1
              }else if(letterIndex==words[wordIndex].length){
-               setTimeout(() => {
+                time.current=setTimeout(() => {
                     text.current.textContent=text.current.textContent.slice(0,len-1)
                     len-=1
                }, 1000);
@@ -32,6 +32,7 @@ const Writer=()=>{
        }, 140);
        return ()=>{
         clearInterval(intr)
+        clearTimeout(time.current)
        }
     },[])
     return (
